@@ -1,0 +1,8 @@
+<h2 class="page-header">핸드폰 변경</h2>
+<form (ngSubmit)="onUpdateSubmit()">
+    <div class="form-group">
+        <label>새 핸드폰 번호</label>
+        <input type="text" [(ngModel)]="userphone" name="userphone" class="form-control">
+    </div>
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>

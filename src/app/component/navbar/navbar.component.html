@@ -1,0 +1,79 @@
+<!-- CSS -->
+<style>
+  a {
+    color: rgb(105, 105, 105);
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0;
+    z-index: 9999;
+  }
+
+  body {
+    padding-bottom: 68px;
+  }
+
+  .nav-link:hover {
+    color: black;
+  }
+</style>
+
+<!-- 폰트 -->
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Geo&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<!-- 메인-->
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+
+    <!-- 메뉴 스타일 -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- 메뉴 설정 -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="container">
+        <ul class="navbar-nav ml-2 mr-4">
+          <li class="nav-item">
+            <a class="nav-link"
+              style="font-weight: 700; font-size: 35px; font-family: 'Geo', sans-serif; color: #044886;"
+              href="/">Eraser.T</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item mr-4"><a class="nav-link" routerLink="#">회사소개</a></li>
+          <li class="nav-item mr-4"><a class="nav-link" routerLink="/download">다운로드</a></li>
+          <li class="nav-item mr-4"><a class="nav-link" routerLink="#">제품구매</a></li>
+          <li class="nav-item mr-4"><a class="nav-link" routerLink="#">고객센터</a></li>
+        </ul>
+
+
+        <ul class="navbar-nav mr-2 ml-auto">
+          <li *ngIf="!checkLoggedIn()" class="nav-item ml-4">
+            <a class="nav-link" routerLink="/login">로그인</a>
+          </li>
+          <li *ngIf="!checkLoggedIn()" class="nav-item ml-4">
+            <a class="nav-link" routerLink="/register">회원가입</a>
+          </li>
+          <li *ngIf="checkLoggedIn()" class="nav-item mr-4">
+            <a class="nav-link" (click)="gotologs()" routerLink="/logs/{{userid}}">로그</a>
+          </li>
+          <li *ngIf="checkLoggedIn()" class="nav-item mr-4">
+            <a class="nav-link" routerLink="/profile">마이페이지</a>
+          </li>
+          <li *ngIf="checkLoggedIn()" class="nav-item">
+            <a class="nav-link" (click)="onLogoutClick()" href="javascript:location.reload()">로그아웃</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</body>

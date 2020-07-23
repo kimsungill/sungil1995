@@ -1,0 +1,12 @@
+<!-- 기본설정 -->
+<app-navbar></app-navbar>
+
+<div *ngIf="username">
+    <h2 class="page-header">>내 정보</h2>
+    <ul class="list-group">
+        <li class="list-group-item">이름: {{username}}</li>
+        <li class="list-group-item">아이디: {{userid}}</li>
+        <li class="list-group-item">핸드폰: {{userphone}} <button class="btn btn-primary" (click)="doUpdateEmail()">핸드폰 변경</button></li>
+    </ul>
+    <button class="btn btn-primary" (click)="doUpdatePassword()">비밀번호 변경</button>
+</div>

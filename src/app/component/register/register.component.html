@@ -1,0 +1,70 @@
+<!-- 기본설정 -->
+<div class="container" style="text-align: center;">
+    <flash-messages></flash-messages>
+</div>
+
+<!-- 스타일 -->
+<style>
+    a:link {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: black;
+    }
+</style>
+
+<!-- 폰트 -->
+<link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+<!-- 메인 -->
+<div class="container" style="height: 830px; background-color: white; padding:120px 10px 120px 10px; width: 700px;">
+    <div class="container" style="text-align: center;">
+        <a href="/" style="font-family: 'Acme', sans-serif; font-size: 70px; color:#044886;">Eraser.T</a>
+        <div class="row" style="padding:10px 10px 0 10px; margin:10px 10px 0 10px;">
+            <div class="col-md-8" style="margin: 0 auto; padding:15px 15px 0 15px">
+
+                <!-- 회원가입 폼 -->
+                <form (ngSubmit)="onRegisterSubmit()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" [(ngModel)]="username"
+                            placeholder="이름" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="userid" [(ngModel)]="userid" placeholder="아이디" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="userpassword" [(ngModel)]="userpassword"
+                            placeholder="비밀번호" />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="userpassword2" [(ngModel)]="userpassword2"
+                            placeholder="비밀번호 확인" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="userphone" [(ngModel)]="userphone"
+                            placeholder="핸드폰 번호" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">회원가입</button>
+                    </div>
+                </form>
+                <!-- 부가적 링크 -->
+                <div style="border-top:1px solid #8e8e8e; padding-top: 15px; margin-top: 35px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Bottom -->
+    <footer>
+        <div class="container">
+            <p style="text-align:center; padding: 10px; font-size: 13px; margin: 0 auto;">Copyright &nbsp;©
+                &nbsp;Eraser.T
+                Corp. &nbsp;All rights reserved.</p>
+        </div>
+    </footer>
+</div>

@@ -1,0 +1,38 @@
+<!-- 기본설정 -->
+<app-navbar></app-navbar>
+
+<br><br>
+<div class="card">
+    <div class="card-body">
+        <h4 class="card-title">검색 결과</h4>
+        <table class="table table-hover">
+            <thead align="center">
+                <tr>
+                    <th width="65%">파일 이름</th>
+                    <th>날짜 / 시간</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody align="center">
+                <tr *ngFor="let log of logs">
+                    <td>{{log.filename}}</td>
+                    <td>
+                        <p>{{log.uploadDate | date:'yy-MM-d'}} / {{log.uploadDate | date:'HH:mm'}}</p>
+                    </td>
+                    <td><a class="btn btn-info" role="button" href="http://localhost:3000/logs/logdownload/{{log.filename}}"><font color="white">다운</font></a>&nbsp;<a class="btn btn-danger" role="button" href="http://localhost:3000/logs/logdelete/{{log.filename}}"><font color="white">삭제</font></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <form class="form-inline my-2 my-lg-0" (ngSubmit)="searchLog()">
+        <input
+          class="form-control mr-sm-2"
+          type="search"
+          name="filename"
+          id="filename"
+        />
+        <button class="btn btn-primary" type="submit">
+          검색
+        </button>
+      </form>
+</div>

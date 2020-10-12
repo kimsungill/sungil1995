@@ -13,6 +13,8 @@ export class SearchComponent implements OnInit {
   userString: string;
   userid: string;
   logs: any[];
+  items = [];
+  pageOfItems: Array<any>;
 
   constructor(private route: ActivatedRoute, private authService: AuthService, private router: Router) { }
 
@@ -28,11 +30,22 @@ export class SearchComponent implements OnInit {
     this.authService.readBoard(this.filename, this.userid).subscribe(
       data => {
         this.logs = data['msg'];
+        this.items = Array(this.logs.length).fill(0).map((x, i) => ({ 
+          id: this.logs[i]['_id'], 
+          name: this.logs[i]['filename'], 
+          uploadDate: this.logs[i]['uploadDate'], 
+          userid: this.userid }));
       },
       error => {
         console.log(error);
       }
     )
+  }
+
+
+  onChangePage(pageOfItems: Array<any>) {
+    // update current page of items
+    this.pageOfItems = pageOfItems;
   }
 
   searchLog() {

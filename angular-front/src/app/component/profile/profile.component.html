@@ -1,12 +1,24 @@
 <!-- 기본설정 -->
 <app-navbar></app-navbar>
+<div class="container" style="text-align: center; height: 600px; padding-top: 20px;">
 
-<div *ngIf="username">
-    <h2 class="page-header">>내 정보</h2>
-    <ul class="list-group">
-        <li class="list-group-item">이름: {{username}}</li>
-        <li class="list-group-item">아이디: {{userid}}</li>
-        <li class="list-group-item">핸드폰: {{userphone}} <button class="btn btn-primary" (click)="doUpdateEmail()">핸드폰 변경</button></li>
-    </ul>
-    <button class="btn btn-primary" (click)="doUpdatePassword()">비밀번호 변경</button>
+    <!-- 메인 -->
+    <div *ngIf="username">
+        <h2 class="page-header">>내 정보</h2>
+        <ul class="list-group">
+            <li class="list-group-item">이름: {{username}}</li>
+            <li class="list-group-item">아이디: {{userid}}</li>
+            <li class="list-group-item">핸드폰: {{userphone}} <button class="btn btn-primary" (click)="doUpdateEmail()">핸드폰
+                    변경</button></li>
+        </ul>
+        <button class="btn btn-primary" (click)="doUpdatePassword()">비밀번호 변경</button>
+    </div>
 </div>
+
+<!-- Footer Bottom -->
+<footer>
+    <div
+      style="text-align:center; padding: 30px 0 30px 0; font-size: 13px; margin: 0 auto; border-top: 1px solid #d7dbe6;">
+      <p class="container">Copyright &nbsp;© &nbsp;Eraser.T Corp. &nbsp;All rights reserved.</p>
+    </div>
+  </footer>

@@ -3,6 +3,7 @@ export class User {
     username: string;
     userid: string;
     userpassword: string;
+    userpassword2: string;
     userphone: number;
   }
   
@@ -19,4 +20,12 @@ export class User {
     userid: string;
     userphone: number;
   }
+
+  // 이메일 인증 데이터 모델
+  export class Email {
+    semail: string;
+  }
   
+  export class Cert {
+    cert: string;
+  }

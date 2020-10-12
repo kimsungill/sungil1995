@@ -12,6 +12,7 @@
     background-color: rgba(255, 255, 255, 1);
     padding: 0;
     z-index: 9999;
+    box-shadow: 0 1px 10px gray;
   }
 
   body {
@@ -70,7 +71,7 @@
             <a class="nav-link" routerLink="/profile">마이페이지</a>
           </li>
           <li *ngIf="checkLoggedIn()" class="nav-item">
-            <a class="nav-link" (click)="onLogoutClick()" href="javascript:location.reload()">로그아웃</a>
+            <a class="nav-link" (click)="onLogoutClick()" routerLink="/login">로그아웃</a>
           </li>
         </ul>
       </div>

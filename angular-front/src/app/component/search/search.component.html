@@ -1,38 +1,93 @@
 <!-- 기본설정 -->
 <app-navbar></app-navbar>
+<div class="container" style="text-align: center; height: 600px; padding-top: 20px;">
 
-<br><br>
-<div class="card">
-    <div class="card-body">
-        <h4 class="card-title">검색 결과</h4>
-        <table class="table table-hover">
-            <thead align="center">
-                <tr>
-                    <th width="65%">파일 이름</th>
-                    <th>날짜 / 시간</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody align="center">
-                <tr *ngFor="let log of logs">
-                    <td>{{log.filename}}</td>
-                    <td>
-                        <p>{{log.uploadDate | date:'yy-MM-d'}} / {{log.uploadDate | date:'HH:mm'}}</p>
-                    </td>
-                    <td><a class="btn btn-info" role="button" href="http://localhost:3000/logs/logdownload/{{log.filename}}"><font color="white">다운</font></a>&nbsp;<a class="btn btn-danger" role="button" href="http://localhost:3000/logs/logdelete/{{log.filename}}"><font color="white">삭제</font></a></td>
-                </tr>
-            </tbody>
-        </table>
+    <!-- 메인 -->
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">검색 결과</h4>
+            <table class="table table-hover">
+                <thead align="center">
+                    <tr>
+                        <th width="65%">파일 이름</th>
+                        <th>날짜 / 시간</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody align="center">
+                    <tr *ngFor="let log of logs">
+                        <td>{{log.filename}}</td>
+                        <td>
+                            <p>{{log.uploadDate | date:'yy-MM-d'}} / {{log.uploadDate | date:'HH:mm'}}</p>
+                        </td>
+                        <td><a class="btn btn-info" role="button"
+                                href="http://localhost:3000/logs/logdownload/{{user.userid}}/{{log.filename}}">
+                                <font color="white">다운</font>
+                            </a>&nbsp;<a class="btn btn-danger" role="button"
+                                href="http://localhost:3000/logs/logdelete/{{user.userid}}/{{log.filename}}">
+                                <font color="white">삭제</font>
+                            </a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <form class="form-inline my-2 my-lg-0" (ngSubmit)="searchLog()">
+            <input class="form-control mr-sm-2" type="search" name="filename" id="filename" />
+            <button class="btn btn-primary" type="submit">
+                검색
+            </button>
+        </form>
     </div>
-    <form class="form-inline my-2 my-lg-0" (ngSubmit)="searchLog()">
-        <input
-          class="form-control mr-sm-2"
-          type="search"
-          name="filename"
-          id="filename"
-        />
-        <button class="btn btn-primary" type="submit">
-          검색
-        </button>
-      </form>
-</div>
+
+
+    <br><br><br><br>
+    <h4>테스트 중</h4>
+    <br>
+    <div class="card text-center m-3">
+        <h3 class="card-header">로그 목록</h3>
+        <div class="card-body">
+            <!-- <h4 class="card-title">로그 목록</h4> -->
+            <table class="table table-hover">
+                <thead align="center">
+                    <tr>
+                        <th width="65%">파일 이름</th>
+                        <th>날짜 / 시간</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody align="center">
+                    <tr *ngFor="let item of pageOfItems">
+                        <td>{{item.name}}</td>
+                        <td>{{item.uploadDate | date:'yy-MM-d'}} / {{item.uploadDate | date:'HH:mm'}}</td>
+                        <td>
+                            <a class="btn btn-info" role="button"
+                                href="http://eraser2020.herokuapp.com/logs/logdownload/{{item.id}}">
+                                <font color="white">다운</font>
+                            </a>&nbsp;
+                            <a class="btn btn-danger" role="button"
+                                href="http://eraser2020.herokuapp.com/logs/logdelete/{{item.userid}}/{{item.id}}">
+                                <font color="white">삭제</font>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <form class="form-inline my-2 my-lg-0" (ngSubmit)="searchLog()">
+                <input class="form-control mr-sm-2" type="search" name="filename" id="filename" />
+                <button class="btn btn-primary" type="submit">
+                    검색
+                </button>
+            </form>
+        </div>
+        <div class="card-footer">
+            <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <footer>
+        <div
+            style="text-align:center; padding: 30px 0 30px 0; font-size: 13px; margin: 0 auto; border-top: 1px solid #d7dbe6;">
+            <p class="container">Copyright &nbsp;© &nbsp;Eraser.T Corp. &nbsp;All rights reserved.</p>
+        </div>
+    </footer>

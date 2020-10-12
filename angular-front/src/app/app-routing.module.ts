@@ -12,6 +12,7 @@ import { DownloadappComponent } from './component/downloadapp/downloadapp.compon
 import { SearchComponent } from './component/search/search.component';
 import { BlankForReloadComponent } from './component/blank-for-reload/blank-for-reload.component';
 import { AuthGuard } from './guards/auth.guard';
+import { EmailregisterComponent } from './component/emailregister/emailregister.component';
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   { path: 'logs/:userid', component: LogsComponent, canActivate: [AuthGuard] },
   { path: 'download', component: DownloadappComponent },
   { path: 'search/:userid/:filename', component: SearchComponent, canActivate: [AuthGuard] },
-  { path: 'blank-for-reload', component: BlankForReloadComponent }
+  { path: 'blank-for-reload', component: BlankForReloadComponent },
+  { path: 'emailregister', component: EmailregisterComponent }
 ];
 
 @NgModule({

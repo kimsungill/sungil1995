@@ -17,24 +17,26 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-// 로그인 버튼 눌렀을때 발동
-onLoginSubmit() {
-  const login = {
-    userid: this.userid,
-    userpassword: this.userpassword
-  }
-  
-// 로그인 검증
-  this.authService.authenticateUser(login).subscribe(data => {
-    if(data.success) {
-      this.authService.storeUserData(data.token, data.userNoPW);
-      this.flashMessage.show('You are now logged in', {cssClass: 'alert-success', timeout: 5000});
-      this.router.navigate(['/']);
-    } else {
-      this.flashMessage.show(data.msg, {cssClass: 'alert-danger', timeout: 5000});
-      this.router.navigate(['login']);
+  // 로그인 버튼 눌렀을때 발동
+  onLoginSubmit() {
+    const login = {
+      userid: this.userid,
+      userpassword: this.userpassword
     }
-  });
-}
+
+    // 로그인 검증
+    this.authService.authenticateUser(login).subscribe(data => {
+      if (data.success) {
+        this.authService.storeUserData(data.token, data.userNoPW);
+        this.router.navigate(['/']);
+      } else if (data.auth == false) {
+        alert("이메일 인증 후 가입이 완료됩니다.");
+        this.router.navigate(['/emailregister']);
+      } else {
+        this.flashMessage.show(data.msg, { cssClass: 'alert-danger', timeout: 5000 });
+        this.router.navigate(['/login']);
+      }
+    });
+  }
 
 }

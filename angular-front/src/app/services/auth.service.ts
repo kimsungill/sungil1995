@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { User, Login, UserNoPW } from '../models/user';
+import { User, Login, UserNoPW, Email, Cert } from '../models/user';
 import { JwtHelperService } from '@auth0/angular-jwt';
 
 const httpOptions = {
@@ -13,6 +13,7 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
   authToken: any;
   userNoPW: UserNoPW;
@@ -22,16 +23,28 @@ export class AuthService {
 
   prepEndpoint(ep) {
     // 1. localhost에 포팅시
-    return 'http://localhost:3000/' + ep;
+    // return 'http://localhost:3000/' + ep;
 
     // 2. Heroku 클라우드 서버에 포팅 시
-    //  return ep;
+     return ep;
   }
 
   // 회원가입
   registerUser(user): Observable<any> {
     const registerUrl = this.prepEndpoint('users/register');
     return this.http.post<User>(registerUrl, user, httpOptions);
+  }
+
+  // 이메일인증
+  emailregisterUser(email): Observable<any> {
+    const emailregisterUrl = this.prepEndpoint('cert/emailregister');
+    return this.http.post<Email>(emailregisterUrl, email, httpOptions);
+  }
+
+  // 인증비교
+  emailcertUser(cert): Observable<any> {
+    const emailregisterUrl = this.prepEndpoint('cert/emailregister');
+    return this.http.post<Cert>(emailregisterUrl, cert, httpOptions);
   }
 
   // 로그인
@@ -57,6 +70,7 @@ export class AuthService {
     this.authToken = localStorage.getItem('id_token');
     const httpOptions1 = {
       headers: new HttpHeaders({
+        'Access-Control-Allow-Headers': '*',
         'Content-Type': 'application/json',
         'Authorization': this.authToken
       })

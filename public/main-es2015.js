@@ -58,7 +58,20 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<app-navbar></app-navbar>\n\n<div>\n    <a href=\"http://localhost:3000/ekdnsfhem/android.zip\" target=\"_blank\">android</a>&nbsp;\n    <a href=\"http://localhost:3000/ekdnsfhem/windows.zip\" target=\"_blank\">windows</a>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<app-navbar></app-navbar>\n<div class=\"container\" style=\"text-align: center; height: 600px; padding-top: 20px;\">\n\n    <!-- 스타일 -->\n    <style>\n        a:link {\n            text-decoration: none;\n            color: black;\n        }\n\n        a:visited {\n            text-decoration: none;\n            color: black;\n        }\n    </style>\n\n    <!-- 메인 -->\n    <h3> 다운로드 센터</h3>\n    <div class=\"row\">\n        <div class=\"col-sm\">\n            <button type=\"button\" class=\"btn btn-outline-dark btn-lg btn-block\"><a\n                    href=\"http://eraser2020.herokuapp.com/ekdnsfhem/android.zip\">Windows 무료 다운로드</a></button>\n        </div>\n        <div class=\"col-sm\">\n            <button type=\"button\" class=\"btn btn-outline-dark btn-lg btn-block\"><a\n                    href=\"http://eraser2020.herokuapp.com/ekdnsfhem/windows.zip\">Android 무료 다운로드</a></button>\n        </div>\n    </div>\n</div>\n\n<!-- Footer Bottom -->\n<footer>\n    <div\n        style=\"text-align:center; padding: 30px 0 30px 0; font-size: 13px; margin: 0 auto; border-top: 1px solid #d7dbe6;\">\n        <p class=\"container\">Copyright &nbsp;© &nbsp;Eraser.T Corp. &nbsp;All rights reserved.</p>\n    </div>\n</footer>");
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/emailregister/emailregister.component.html":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/emailregister/emailregister.component.html ***!
+  \************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<div class=\"container\" style=\"text-align: center;\">\n    <flash-messages></flash-messages>\n</div>\n\n<!-- 스타일 -->\n<style>\n    a:link {\n        text-decoration: none;\n        color: black;\n    }\n\n    a:visited {\n        text-decoration: none;\n        color: black;\n    }\n\n    #abc:focus {\n        border-color: gray;\n        box-shadow: 0 0 0 .1rem rgb(150, 150, 150);\n    }\n</style>\n\n<!-- 폰트 -->\n<link href=\"https://fonts.googleapis.com/css2?family=Acme&display=swap\" rel=\"stylesheet\">\n\n<!-- 메인 -->\n<div class=\"container\" style=\"height: 700px; background-color: white; padding:170px 10px 120px 10px; width: 700px;\">\n    <div class=\"container\" style=\"text-align: center;\">\n        <a href=\"/\" style=\"font-family: 'Acme', sans-serif; font-size: 70px; color:#044886;\">Eraser.T</a>\n        <div class=\"row\" style=\"padding:10px 10px 0 10px; margin:10px 10px 0 10px;\">\n            <div class=\"col-md-8\" style=\"margin: 0 auto; padding:15px 15px 0 15px\">\n\n                <!-- 인증번호 요청 -->\n                <form (ngSubmit)=\"emailsend()\">\n                    <div class=\"input-group mb-3\">\n                        <input id=\"abc\" type=\"text\" class=\"form-control\" placeholder=\"이메일\"\n                            aria-label=\"Recipient's username\" aria-describedby=\"button-addon2\" name=\"semail\"\n                            [(ngModel)]=\"semail\">\n                        <div class=\"input-group-append\">\n                            <button class=\"btn btn-outline-secondary\" type=\"submit\" id=\"button-addon2\"\n                                >인증번호 요청</button>\n                        </div>\n                    </div>\n                </form>\n\n                <!-- 인증확인 -->\n                <form (ngSubmit)=\"emailcert()\">\n                    <div class=\"form-group\">\n                        <input id=\"abc\" type=\"text\" class=\"form-control\" name=\"cert\" [(ngModel)]=\"cert\"\n                            placeholder=\"인증번호\" />\n                    </div>\n\n                    <div class=\"form-group\">\n                        <button type=\"submit\" class=\"btn btn-outline-secondary btn-lg btn-block\">인증번호\n                            확인</button>\n                    </div>\n                </form>\n\n                <!-- 부가적 링크 -->\n                <div style=\"border-top:1px solid #8e8e8e; padding-top: 15px; margin-top: 35px;\">\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <!-- Footer Bottom -->\n    <footer>\n        <div class=\"container\">\n            <p style=\"text-align:center; padding: 10px; font-size: 13px; margin: 0 auto;\">Copyright &nbsp;©\n                &nbsp;Eraser.T\n                Corp. &nbsp;All rights reserved.</p>\n        </div>\n    </footer>\n</div>");
 
 /***/ }),
 
@@ -71,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<app-navbar></app-navbar>\n\n<!-- 스타일 -->\n<style>\n  .bg-gray-1 {\n    background-color: #f8f9fa;\n  }\n\n  .text-secondary {\n    color: #044886 !important;\n  }\n</style>\n\n<!-- 메인 -->\n<div class=\"text-center py-lg-4 py-xxl-5\"\n  style=\"background:url(https://drfone.wondershare.com/images2019/home-banner-bg.jpg) no-repeat center top; background-size:cover; height: 650px;\">\n  <div class=\"container py-4 py-xxl-5 h-100\">\n    <div class=\"d-flex align-items-center justify-content-center h-100\">\n      <div class=\"text-white\">\n        <h1>Eraser.T - 모든 파일 완전 삭제</h1>\n        <p style=\"margin-top:15px;\">데이터를 복구 할 수 없도록 덮어 쓰기하여 데이터를 완전하게 삭제합니다. 삭제한 데이터와 기록은 30일간 보관됩니다.</p>\n        <p>Eraser.T는 무료 소프트웨어이며 소스 코드는 GNU General Public License에 따라 배포됩니다.</p>\n\n        <div class=\"container\">\n          <div class=\"row\">\n            <div class=\"col-sm\">\n              <button type=\"button\" class=\"btn btn-outline-light btn-lg btn-block\">Windows 무료 다운로드 </button>\n            </div>\n            <div class=\"col-sm\">\n              <button type=\"button\" class=\"btn btn-outline-light btn-lg btn-block\">Android 무료 다운로드 </button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- 중간 설명 -->\n<!-- 1번째 -->\n<div class=\"py-5\">\n  <div class=\"container py-3 py-lg-4\">\n    <h2 class=\"text-secondary text-center\">선택해서 사용해야 하는 이유? - Eraser.T</h2>\n    <p class=\"mx-auto text-center mt-3\" style=\"max-width:1100px;\">간단한 삭제 또는 하드 드라이브 초기화는 데이터를 영구적으로 지우지 않습니다. 삭제 된 데이터는\n      여전히 사용 가능한 기술로 복구 할 수 있습니다. <br>Eraser.T는 파일을 영구적으로 지우고 인터넷 사용 기록, 캐시를 지우고 개인 정보를 보호하여 개인 정보를 안전하게 보호 합니다.</p>\n    <div class=\"row align-items-center mt-5\">\n      <div class=\"col-lg-6\">\n        <h4 class=\"text-secondary mt-2\">데이터, 개인정보 유출</h4>\n        <p>버려진 하드 드라이브에서 완전히 삭제되지 않은 데이터를 발견해 복구하는 범죄가 급증하고 있습니다. Eraser.T로 데이터를 완전히 삭제해서 개인정보를 보호 해야 합니다.</p>\n      </div>\n      <div class=\"col-lg-6 text-center mt-4 mt-lg-0\"><img\n          src=\"https://drfone.wondershare.com/images/images2019/product/drfone-android-eraser-1.png\" class=\"img-fluid\"\n          alt=\"privacy protection\"></div>\n    </div>\n  </div>\n</div>\n\n<!-- 2번째 -->\n<div class=\"py-5 bg-gray-1\">\n  <div class=\"container py-3 py-lg-4\">\n    <div class=\"row align-items-center\">\n      <div class=\"col-lg-6 text-center order-2 order-lg-1 mt-4 mt-lg-0\"><img\n          src=\"https://drfone.wondershare.com/images/images2019/product/drfone-android-eraser-2.png\" class=\"img-fluid\"\n          alt=\"erase private data\"></div>\n      <div class=\"col-lg-6 order-1 order-lg-2\">\n        <h4 class=\"text-secondary mt-2\">삭제되지 않은 파일</h4>\n        <p>클릭 한 번으로 간편하게 삭제되지 않은 파일을 스캔하고 완전 삭제합니다. Eraser.T는 윈도우, 안드로이드 모두 지원합니다. 모든 종류의 파일, 모든 종류의 안드로이드 기기 지원합니다. 실수로\n          삭제한 파일도 복구 가능합니다. 삭제한 데이터는 30일간 보관합니다. 완전 삭제를 하면 하드웨어 성능이 향상합니다.</p>\n        <div class=\"row text-center\">\n          <div class=\"col-6 col-lg-4 mt-4\">\n            <div><img src=\"https://drfone.wondershare.com/images2019/android-erase-pic3.png\" width=\"116\" height=\"116\"\n                alt=\"wipe all data\"></div>\n            <h6 class=\"mt-3\">모든 파일</h6>\n          </div>\n          <div class=\"col-6 col-lg-4 mt-4\">\n            <div><img src=\"https://drfone.wondershare.com/images2019/android-9-0-pie.png\" width=\"116\" height=\"116\"\n                alt=\"all android models supported\"></div>\n            <h6 class=\"mt-3\">모든 안드로이드 기기</h6>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- 3번째 -->\n<div class=\"py-5\">\n  <div class=\"container py-3 py-lg-4\">\n    <div class=\"row align-items-center\">\n      <div class=\"col-lg-6\">\n        <h4 class=\"text-secondary mt-2\">데이터 100% 삭제 KJ20 알고리즘 적용</h4>\n        <p>데이터를 완전히 읽을 수 없게 만들고 전체 디스크를 완전히 정리하도록 도와줍니다. 세계의 최고 수준의 해커들도 데이터의 단 한 조각도 복구할 방법이 없습니다. KJ20은 공종현, 정성철 2명의\n          개발자가 만든 알고리즘입니다. </p>\n      </div>\n      <div class=\"col-lg-6 text-center mt-4 mt-lg-0\"><img\n          src=\"https://drfone.wondershare.com/images/images2019/product/drfone-android-eraser-3.png\" class=\"img-fluid\"\n          alt=\"complete erasure\"></div>\n    </div>\n  </div>\n</div>\n\n<!-- Footer Bottom -->\n<footer>\n  <div\n    style=\"text-align:center; padding: 30px 0 30px 0; font-size: 13px; margin: 0 auto; border-top: 1px solid #d7dbe6;\">\n    <p class=\"container\">Copyright &nbsp;© &nbsp;Eraser.T Corp. &nbsp;All rights reserved.</p>\n  </div>\n</footer>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<app-navbar></app-navbar>\n\n<!-- 스타일 -->\n<style>\n  .bg-gray-1 {\n    background-color: #f8f9fa;\n  }\n\n  .text-secondary {\n    color: #044886 !important;\n  }\n</style>\n\n<!-- 메인 -->\n<div class=\"text-center py-lg-4 py-xxl-5\"\n  style=\"background:url(https://cdn.cryptopal.com/wp-content/uploads/2019/08/young-man-using-modern-smartphone-at-home.jpg) no-repeat center top; background-size:cover; height: 690px;\">\n  <div class=\"container py-4 py-xxl-5 h-100\">\n    <div class=\"d-flex align-items-center justify-content-center h-100\">\n      <div>\n        <h1>Eraser.T - 파일 완전 삭제</h1>\n        <h4>\n          <p style=\"margin-top:30px; font-weight:bold;\">데이터를 복구 할 수 없도록 덮어 쓰기하여 데이터를 완전하게 삭제합니다. <br> 삭제한 데이터와 기록은 30일간\n            보관됩니다.\n          </p>\n        </h4>\n        <h4>\n          <p style=\"font-weight:bold;\">Eraser.T는 무료 소프트웨어이며 소스 코드는 GNU General Public License에 따라 배포됩니다.</p>\n        </h4>\n\n        <div class=\"container\">\n          <div class=\"row\">\n            <div class=\"col-sm\">\n              <button type=\"button\" class=\"btn btn-outline-dark btn-lg btn-block\"\n                onclick=\"location.href='http://localhost:3000/ekdnsfhem/windows.zip';\">Windows 무료 다운로드</button>\n            </div>\n            <div class=\"col-sm\">\n              <button type=\"button\" class=\"btn btn-outline-dark btn-lg btn-block\"\n                onclick=\"location.href='http://localhost:3000/ekdnsfhem/android.zip';\">Android 무료 다운로드</button>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- 중간 설명 -->\n<!-- 1번째 -->\n<div class=\"py-5\">\n  <div class=\"container py-3 py-lg-4\">\n    <h2 class=\"text-secondary text-center\">선택해서 사용해야 하는 이유? - Eraser.T</h2>\n    <p class=\"mx-auto text-center mt-3\" style=\"max-width:1100px;\">간단한 삭제 또는 하드 드라이브 초기화는 데이터를 영구적으로 지우지 않습니다. 삭제 된 데이터는\n      여전히 사용 가능한 기술로 복구 할 수 있습니다. <br>Eraser.T는 파일을 영구적으로 지우고 인터넷 사용 기록, 캐시를 지우고 개인 정보를 보호하여 개인 정보를 안전하게 보호 합니다.</p>\n    <div class=\"row align-items-center mt-5\">\n      <div class=\"col-lg-6\">\n        <h4 class=\"text-secondary mt-2\">데이터, 개인정보 유출</h4>\n        <p>버려진 하드 드라이브에서 완전히 삭제되지 않은 데이터를 발견해 복구하는 범죄가 급증하고 있습니다. Eraser.T로 데이터를 완전히 삭제해서 개인정보를 보호 해야 합니다.</p>\n      </div>\n      <div class=\"col-lg-6 text-center mt-4 mt-lg-0\"><img\n          src=\"https://drfone.wondershare.com/images/images2019/product/drfone-android-eraser-1.png\" class=\"img-fluid\"\n          alt=\"privacy protection\"></div>\n    </div>\n  </div>\n</div>\n\n<!-- 2번째 -->\n<div class=\"py-5 bg-gray-1\">\n  <div class=\"container py-3 py-lg-4\">\n    <div class=\"row align-items-center\">\n      <div class=\"col-lg-6 text-center order-2 order-lg-1 mt-4 mt-lg-0\"><img\n          src=\"https://drfone.wondershare.com/images/images2019/product/drfone-android-eraser-2.png\" class=\"img-fluid\"\n          alt=\"erase private data\"></div>\n      <div class=\"col-lg-6 order-1 order-lg-2\">\n        <h4 class=\"text-secondary mt-2\">삭제되지 않은 파일</h4>\n        <p>클릭 한 번으로 간편하게 삭제되지 않은 파일을 스캔하고 완전 삭제합니다. Eraser.T는 윈도우, 안드로이드 모두 지원합니다. 모든 종류의 파일, 모든 종류의 안드로이드 기기 지원합니다. 실수로\n          삭제한 파일도 복구 가능합니다. 삭제한 데이터는 30일간 보관합니다. 완전 삭제를 하면 하드웨어 성능이 향상합니다.</p>\n        <div class=\"row text-center\">\n          <div class=\"col-6 col-lg-4 mt-4\">\n            <div><img src=\"https://drfone.wondershare.com/images2019/android-erase-pic3.png\" width=\"116\" height=\"116\"\n                alt=\"wipe all data\"></div>\n            <h6 class=\"mt-3\">모든 파일</h6>\n          </div>\n          <div class=\"col-6 col-lg-4 mt-4\">\n            <div><img src=\"https://drfone.wondershare.com/images2019/android-9-0-pie.png\" width=\"116\" height=\"116\"\n                alt=\"all android models supported\"></div>\n            <h6 class=\"mt-3\">모든 안드로이드 기기</h6>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<!-- 3번째 -->\n<div class=\"py-5\">\n  <div class=\"container py-3 py-lg-4\">\n    <div class=\"row align-items-center\">\n      <div class=\"col-lg-6\">\n        <h4 class=\"text-secondary mt-2\">데이터 100% 삭제 KJ20 알고리즘 적용</h4>\n        <p>데이터를 완전히 읽을 수 없게 만들고 전체 디스크를 완전히 정리하도록 도와줍니다. 세계의 최고 수준의 해커들도 데이터의 단 한 조각도 복구할 방법이 없습니다. KJ20은 공종현, 정성철 2명의\n          개발자가 만든 알고리즘입니다. </p>\n      </div>\n      <div class=\"col-lg-6 text-center mt-4 mt-lg-0\"><img\n          src=\"https://drfone.wondershare.com/images/images2019/product/drfone-android-eraser-3.png\" class=\"img-fluid\"\n          alt=\"complete erasure\"></div>\n    </div>\n  </div>\n</div>\n\n<!-- Footer Bottom -->\n<footer>\n  <div\n    style=\"text-align:center; padding: 30px 0 30px 0; font-size: 13px; margin: 0 auto; border-top: 1px solid #d7dbe6;\">\n    <p class=\"container\">Copyright &nbsp;© &nbsp;Eraser.T Corp. &nbsp;All rights reserved.</p>\n  </div>\n</footer>");
 
 /***/ }),
 
@@ -84,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<div class=\"container\" style=\"text-align: center;\">\n    <flash-messages></flash-messages>\n</div>\n\n<!-- 스타일 -->\n<style>\n    a:link {\n        text-decoration: none;\n        color: black;\n    }\n\n    a:visited {\n        text-decoration: none;\n        color: black;\n    }\n\n    .acolor {\n        text-decoration: none !important;\n        color: #8e8e8e !important;\n        font-size: 12px;\n    }\n\n    .txt_bar {\n        margin: 0 13px 0 11px;\n        color: #d4d4d4;\n    }\n</style>\n\n<!-- 폰트 -->\n<link href=\"https://fonts.googleapis.com/css2?family=Acme&display=swap\" rel=\"stylesheet\">\n\n<!-- 메인 -->\n<div class=\"container\" style=\"height: 830px; background-color: white; padding:150px 10px 120px 10px; width: 700px;\">\n    <div class=\"container\" style=\"text-align: center;\">\n        <a href=\"/\" style=\"font-family: 'Acme', sans-serif; font-size: 70px; color:#044886;\">Eraser.T</a>\n        <div class=\"row\" style=\"padding:10px 10px 0 10px; margin:10px 10px 0 10px;\">\n            <div class=\"col-md-8\" style=\"margin: 0 auto; padding:15px 15px 0 15px\">\n\n                <!-- 로그인 폼 -->\n                <form (ngSubmit)=\"onLoginSubmit()\">\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control\" name=\"userid\" [(ngModel)]=\"userid\" placeholder=\"아이디\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <input type=\"password\" class=\"form-control\" name=\"userpassword\" [(ngModel)]=\"userpassword\"\n                            placeholder=\"비밀번호\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\">로그인</button>\n                    </div>\n                </form>\n\n                <!-- 부가적 링크 -->\n                <div style=\"border-top:1px solid #8e8e8e; padding-top: 15px; margin-top: 35px;\">\n                    <a class=\"acolor\" href=\"#\">아이디 찾기</a>\n                    <span class=\"txt_bar\">|</span>\n                    <a class=\"acolor\" href=\"#\">비밀번호 찾기 </a>\n                    <span class=\"txt_bar\">|</span>\n                    <a class=\"acolor\" routerLink=\"/register\">회원가입 </a>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <!-- Footer Bottom -->\n    <footer>\n        <div class=\"container\">\n            <p style=\"text-align:center; padding: 10px; font-size: 13px; margin: 0 auto;\">Copyright &nbsp;©\n                &nbsp;Eraser.T\n                Corp. &nbsp;All rights reserved.</p>\n        </div>\n    </footer>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<div class=\"container\" style=\"text-align: center;\">\n    <flash-messages></flash-messages>\n</div>\n\n<!-- 스타일 -->\n<style>\n    a:link {\n        text-decoration: none;\n        color: black;\n    }\n\n    a:visited {\n        text-decoration: none;\n        color: black;\n    }\n\n    .acolor {\n        text-decoration: none !important;\n        color: #8e8e8e !important;\n        font-size: 12px;\n    }\n\n    .txt_bar {\n        margin: 0 13px 0 11px;\n        color: #d4d4d4;\n    }\n</style>\n\n<!-- 폰트 -->\n<link href=\"https://fonts.googleapis.com/css2?family=Acme&display=swap\" rel=\"stylesheet\">\n\n<!-- 메인 -->\n<div class=\"container\" style=\"height: 700px; background-color: white; padding:170px 10px 120px 10px; width: 700px;\">\n    <div class=\"container\" style=\"text-align: center;\">\n        <a href=\"/\" style=\"font-family: 'Acme', sans-serif; font-size: 70px; color:#044886;\">Eraser.T</a>\n        <div class=\"row\" style=\"padding:10px 10px 0 10px; margin:10px 10px 0 10px;\">\n            <div class=\"col-md-8\" style=\"margin: 0 auto; padding:15px 15px 0 15px\">\n\n                <!-- 로그인 폼 -->\n                <form (ngSubmit)=\"onLoginSubmit()\">\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control\" name=\"userid\" [(ngModel)]=\"userid\" placeholder=\"아이디\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <input type=\"password\" class=\"form-control\" name=\"userpassword\" [(ngModel)]=\"userpassword\"\n                            placeholder=\"비밀번호\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\">로그인</button>\n                    </div>\n                </form>\n\n                <!-- 부가적 링크 -->\n                <div style=\"border-top:1px solid #8e8e8e; padding-top: 15px; margin-top: 35px;\">\n                    <a class=\"acolor\" href=\"#\">아이디 찾기</a>\n                    <span class=\"txt_bar\">|</span>\n                    <a class=\"acolor\" href=\"#\">비밀번호 찾기 </a>\n                    <span class=\"txt_bar\">|</span>\n                    <a class=\"acolor\" routerLink=\"/register\">회원가입 </a>\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <!-- Footer Bottom -->\n    <footer>\n        <div class=\"container\">\n            <p style=\"text-align:center; padding: 10px; font-size: 13px; margin: 0 auto;\">Copyright &nbsp;©\n                &nbsp;Eraser.T\n                Corp. &nbsp;All rights reserved.</p>\n        </div>\n    </footer>\n</div>");
 
 /***/ }),
 
@@ -97,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<app-navbar></app-navbar>\n\n<br><br>\n<div class=\"card\">\n    <div class=\"card-body\">\n        <h4 class=\"card-title\">로그 목록</h4>\n        <table class=\"table table-hover\">\n            <thead align=\"center\">\n                <tr>\n                    <th width=\"65%\">파일 이름</th>\n                    <th>날짜 / 시간</th>\n                    <th></th>\n                </tr>\n            </thead>\n            <tbody align=\"center\">\n                <tr *ngFor=\"let log of logs\">\n                    <td>{{log.filename}}</td>\n                    <td>\n                        <p>{{log.uploadDate | date:'yy-MM-d'}} / {{log.uploadDate | date:'HH:mm'}}</p>\n                    </td>\n                    <td><a class=\"btn btn-info\" role=\"button\" href=\"http://localhost:3000/logs/logdownload/{{log.filename}}\"><font color=\"white\">다운</font></a>&nbsp;<a class=\"btn btn-danger\" role=\"button\" href=\"http://localhost:3000/logs/logdelete/{{log.filename}}\"><font color=\"white\">삭제</font></a></td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <form class=\"form-inline my-2 my-lg-0\" (ngSubmit)=\"searchLog()\">\n        <input\n          class=\"form-control mr-sm-2\"\n          type=\"search\"\n          name=\"filename\"\n          id=\"filename\"\n        />\n        <button class=\"btn btn-primary\" type=\"submit\">\n          검색\n        </button>\n      </form>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<app-navbar></app-navbar>\n<div class=\"container\" style=\"text-align: center; height: 600px; padding-top: 20px;\">\n\n    <!-- 메인 -->\n    <div class=\"card\">\n        <div class=\"card-body\">\n            <h4 class=\"card-title\">로그 목록</h4>\n            <table class=\"table table-hover\">\n                <thead align=\"center\">\n                    <tr>\n                        <th width=\"65%\">파일 이름</th>\n                        <th>날짜 / 시간</th>\n                        <th></th>\n                    </tr>\n                </thead>\n                <tbody align=\"center\">\n                    <tr *ngFor=\"let log of logs\">\n                        <td>{{log.filename}}</td>\n                        <td>\n                            <p>{{log.uploadDate | date:'yy-MM-d'}} / {{log.uploadDate | date:'HH:mm'}}</p>\n                        </td>\n                        <td><a class=\"btn btn-info\" role=\"button\"\n                                href=\"http://eraser2020.herokuapp.com/logs/logdownload/{{log._id}}\">\n                                <font color=\"white\">다운</font>\n                            </a>&nbsp;<a class=\"btn btn-danger\" role=\"button\"\n                                href=\"http://eraser2020.herokuapp.com/logs/logdelete/{{user.userid}}/{{log._id}}\">\n                                <font color=\"white\">삭제</font>\n                            </a></td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n        <form class=\"form-inline my-2 my-lg-0\" (ngSubmit)=\"searchLog()\" higth=\"100\">\n            <input class=\"form-control mr-sm-2\" type=\"search\" name=\"filename\" id=\"filename\" />\n            <button class=\"btn btn-primary\" type=\"submit\">\n                검색\n            </button>\n        </form>\n    </div>\n\n    <br><br><br><br>\n    <h4>테스트 중</h4>\n    <br>\n    <div class=\"card text-center m-3\">\n        <h3 class=\"card-header\">로그 목록</h3>\n        <div class=\"card-body\">\n            <!-- <h4 class=\"card-title\">로그 목록</h4> -->\n            <table class=\"table table-hover\">\n                <thead align=\"center\">\n                    <tr>\n                        <th width=\"65%\">파일 이름</th>\n                        <th>날짜 / 시간</th>\n                        <th></th>\n                    </tr>\n                </thead>\n                <tbody align=\"center\">\n                    <tr *ngFor=\"let item of pageOfItems\">\n                        <td>{{item.name}}</td>\n                        <td>{{item.uploadDate | date:'yy-MM-d'}} / {{item.uploadDate | date:'HH:mm'}}</td>\n                        <td>\n                            <a class=\"btn btn-info\" role=\"button\"\n                                href=\"http://localhost:3000/logs/logdownload/{{item.id}}\">\n                                <font color=\"white\">다운</font>\n                            </a>&nbsp;\n                            <a class=\"btn btn-danger\" role=\"button\"\n                                href=\"http://localhost:3000/logs/logdelete/{{item.userid}}/{{item.id}}\">\n                                <font color=\"white\">삭제</font>\n                            </a>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n            <form class=\"form-inline my-2 my-lg-0\" (ngSubmit)=\"searchLog()\">\n                <input class=\"form-control mr-sm-2\" type=\"search\" name=\"filename\" id=\"filename\" />\n                <button class=\"btn btn-primary\" type=\"submit\">\n                    검색\n                </button>\n            </form>\n        </div>\n        <div class=\"card-footer\">\n            <jw-pagination [items]=\"items\" (changePage)=\"onChangePage($event)\"></jw-pagination>\n        </div>\n    </div>\n\n\n    <!-- Footer Bottom -->\n    <footer>\n        <div\n            style=\"text-align:center; padding: 30px 0 30px 0; font-size: 13px; margin: 0 auto; border-top: 1px solid #d7dbe6;\">\n            <p class=\"container\">Copyright &nbsp;© &nbsp;Eraser.T Corp. &nbsp;All rights reserved.</p>\n        </div>\n    </footer>");
 
 /***/ }),
 
@@ -110,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- CSS -->\n<style>\n  a {\n    color: rgb(105, 105, 105);\n    font-family: 'Noto Sans KR', sans-serif;\n  }\n\n  nav {\n    position: fixed;\n    top: 0;\n    width: 100%;\n    background-color: rgba(255, 255, 255, 1);\n    padding: 0;\n    z-index: 9999;\n  }\n\n  body {\n    padding-bottom: 68px;\n  }\n\n  .nav-link:hover {\n    color: black;\n  }\n</style>\n\n<!-- 폰트 -->\n<link href=\"https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Geo&display=swap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap\" rel=\"stylesheet\">\n\n<!-- 메인-->\n\n<body>\n  <nav class=\"navbar navbar-expand-lg\">\n\n    <!-- 메뉴 스타일 -->\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n      aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <!-- 메뉴 설정 -->\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <div class=\"container\">\n        <ul class=\"navbar-nav ml-2 mr-4\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\"\n              style=\"font-weight: 700; font-size: 35px; font-family: 'Geo', sans-serif; color: #044886;\"\n              href=\"/\">Eraser.T</a>\n          </li>\n        </ul>\n        <ul class=\"navbar-nav mr-auto\">\n          <li class=\"nav-item mr-4\"><a class=\"nav-link\" routerLink=\"#\">회사소개</a></li>\n          <li class=\"nav-item mr-4\"><a class=\"nav-link\" routerLink=\"/download\">다운로드</a></li>\n          <li class=\"nav-item mr-4\"><a class=\"nav-link\" routerLink=\"#\">제품구매</a></li>\n          <li class=\"nav-item mr-4\"><a class=\"nav-link\" routerLink=\"#\">고객센터</a></li>\n        </ul>\n\n\n        <ul class=\"navbar-nav mr-2 ml-auto\">\n          <li *ngIf=\"!checkLoggedIn()\" class=\"nav-item ml-4\">\n            <a class=\"nav-link\" routerLink=\"/login\">로그인</a>\n          </li>\n          <li *ngIf=\"!checkLoggedIn()\" class=\"nav-item ml-4\">\n            <a class=\"nav-link\" routerLink=\"/register\">회원가입</a>\n          </li>\n          <li *ngIf=\"checkLoggedIn()\" class=\"nav-item mr-4\">\n            <a class=\"nav-link\" (click)=\"gotologs()\" routerLink=\"/logs/{{userid}}\">로그</a>\n          </li>\n          <li *ngIf=\"checkLoggedIn()\" class=\"nav-item mr-4\">\n            <a class=\"nav-link\" routerLink=\"/profile\">마이페이지</a>\n          </li>\n          <li *ngIf=\"checkLoggedIn()\" class=\"nav-item\">\n            <a class=\"nav-link\" (click)=\"onLogoutClick()\" href=\"javascript:location.reload()\">로그아웃</a>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </nav>\n</body>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- CSS -->\n<style>\n  a {\n    color: rgb(105, 105, 105);\n    font-family: 'Noto Sans KR', sans-serif;\n  }\n\n  nav {\n    position: fixed;\n    top: 0;\n    width: 100%;\n    background-color: rgba(255, 255, 255, 1);\n    padding: 0;\n    z-index: 9999;\n    box-shadow: 0 1px 10px gray;\n  }\n\n  body {\n    padding-bottom: 68px;\n  }\n\n  .nav-link:hover {\n    color: black;\n  }\n</style>\n\n<!-- 폰트 -->\n<link href=\"https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&family=Geo&display=swap\" rel=\"stylesheet\">\n<link href=\"https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap\" rel=\"stylesheet\">\n\n<!-- 메인-->\n\n<body>\n  <nav class=\"navbar navbar-expand-lg\">\n\n    <!-- 메뉴 스타일 -->\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\"\n      aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n\n    <!-- 메뉴 설정 -->\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <div class=\"container\">\n        <ul class=\"navbar-nav ml-2 mr-4\">\n          <li class=\"nav-item\">\n            <a class=\"nav-link\"\n              style=\"font-weight: 700; font-size: 35px; font-family: 'Geo', sans-serif; color: #044886;\"\n              href=\"/\">Eraser.T</a>\n          </li>\n        </ul>\n        <ul class=\"navbar-nav mr-auto\">\n          <li class=\"nav-item mr-4\"><a class=\"nav-link\" routerLink=\"#\">회사소개</a></li>\n          <li class=\"nav-item mr-4\"><a class=\"nav-link\" routerLink=\"/download\">다운로드</a></li>\n          <li class=\"nav-item mr-4\"><a class=\"nav-link\" routerLink=\"#\">제품구매</a></li>\n          <li class=\"nav-item mr-4\"><a class=\"nav-link\" routerLink=\"#\">고객센터</a></li>\n        </ul>\n\n\n        <ul class=\"navbar-nav mr-2 ml-auto\">\n          <li *ngIf=\"!checkLoggedIn()\" class=\"nav-item ml-4\">\n            <a class=\"nav-link\" routerLink=\"/login\">로그인</a>\n          </li>\n          <li *ngIf=\"!checkLoggedIn()\" class=\"nav-item ml-4\">\n            <a class=\"nav-link\" routerLink=\"/register\">회원가입</a>\n          </li>\n          <li *ngIf=\"checkLoggedIn()\" class=\"nav-item mr-4\">\n            <a class=\"nav-link\" (click)=\"gotologs()\" routerLink=\"/logs/{{userid}}\">로그</a>\n          </li>\n          <li *ngIf=\"checkLoggedIn()\" class=\"nav-item mr-4\">\n            <a class=\"nav-link\" routerLink=\"/profile\">마이페이지</a>\n          </li>\n          <li *ngIf=\"checkLoggedIn()\" class=\"nav-item\">\n            <a class=\"nav-link\" (click)=\"onLogoutClick()\" routerLink=\"/login\">로그아웃</a>\n          </li>\n        </ul>\n      </div>\n    </div>\n  </nav>\n</body>");
 
 /***/ }),
 
@@ -123,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<app-navbar></app-navbar>\n\n<div *ngIf=\"username\">\n    <h2 class=\"page-header\">>내 정보</h2>\n    <ul class=\"list-group\">\n        <li class=\"list-group-item\">이름: {{username}}</li>\n        <li class=\"list-group-item\">아이디: {{userid}}</li>\n        <li class=\"list-group-item\">핸드폰: {{userphone}} <button class=\"btn btn-primary\" (click)=\"doUpdateEmail()\">핸드폰 변경</button></li>\n    </ul>\n    <button class=\"btn btn-primary\" (click)=\"doUpdatePassword()\">비밀번호 변경</button>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<app-navbar></app-navbar>\n<div class=\"container\" style=\"text-align: center; height: 600px; padding-top: 20px;\">\n\n    <!-- 메인 -->\n    <div *ngIf=\"username\">\n        <h2 class=\"page-header\">>내 정보</h2>\n        <ul class=\"list-group\">\n            <li class=\"list-group-item\">이름: {{username}}</li>\n            <li class=\"list-group-item\">아이디: {{userid}}</li>\n            <li class=\"list-group-item\">핸드폰: {{userphone}} <button class=\"btn btn-primary\" (click)=\"doUpdateEmail()\">핸드폰\n                    변경</button></li>\n        </ul>\n        <button class=\"btn btn-primary\" (click)=\"doUpdatePassword()\">비밀번호 변경</button>\n    </div>\n</div>\n\n<!-- Footer Bottom -->\n<footer>\n    <div\n      style=\"text-align:center; padding: 30px 0 30px 0; font-size: 13px; margin: 0 auto; border-top: 1px solid #d7dbe6;\">\n      <p class=\"container\">Copyright &nbsp;© &nbsp;Eraser.T Corp. &nbsp;All rights reserved.</p>\n    </div>\n  </footer>");
 
 /***/ }),
 
@@ -162,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<div class=\"container\" style=\"text-align: center;\">\n    <flash-messages></flash-messages>\n</div>\n\n<!-- 스타일 -->\n<style>\n    a:link {\n        text-decoration: none;\n        color: black;\n    }\n\n    a:visited {\n        text-decoration: none;\n        color: black;\n    }\n</style>\n\n<!-- 폰트 -->\n<link href=\"https://fonts.googleapis.com/css2?family=Acme&display=swap\" rel=\"stylesheet\">\n\n<!-- 메인 -->\n<div class=\"container\" style=\"height: 830px; background-color: white; padding:120px 10px 120px 10px; width: 700px;\">\n    <div class=\"container\" style=\"text-align: center;\">\n        <a href=\"/\" style=\"font-family: 'Acme', sans-serif; font-size: 70px; color:#044886;\">Eraser.T</a>\n        <div class=\"row\" style=\"padding:10px 10px 0 10px; margin:10px 10px 0 10px;\">\n            <div class=\"col-md-8\" style=\"margin: 0 auto; padding:15px 15px 0 15px\">\n\n                <!-- 회원가입 폼 -->\n                <form (ngSubmit)=\"onRegisterSubmit()\">\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control\" name=\"username\" [(ngModel)]=\"username\"\n                            placeholder=\"이름\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control\" name=\"userid\" [(ngModel)]=\"userid\" placeholder=\"아이디\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <input type=\"password\" class=\"form-control\" name=\"userpassword\" [(ngModel)]=\"userpassword\"\n                            placeholder=\"비밀번호\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <input type=\"password\" class=\"form-control\" name=\"userpassword2\" [(ngModel)]=\"userpassword2\"\n                            placeholder=\"비밀번호 확인\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control\" name=\"userphone\" [(ngModel)]=\"userphone\"\n                            placeholder=\"핸드폰 번호\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\">회원가입</button>\n                    </div>\n                </form>\n                <!-- 부가적 링크 -->\n                <div style=\"border-top:1px solid #8e8e8e; padding-top: 15px; margin-top: 35px;\">\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <!-- Footer Bottom -->\n    <footer>\n        <div class=\"container\">\n            <p style=\"text-align:center; padding: 10px; font-size: 13px; margin: 0 auto;\">Copyright &nbsp;©\n                &nbsp;Eraser.T\n                Corp. &nbsp;All rights reserved.</p>\n        </div>\n    </footer>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<div class=\"container\" style=\"text-align: center;\">\n    <flash-messages></flash-messages>\n</div>\n\n<!-- 스타일 -->\n<style>\n    a:link {\n        text-decoration: none;\n        color: black;\n    }\n\n    a:visited {\n        text-decoration: none;\n        color: black;\n    }\n</style>\n\n<!-- 폰트 -->\n<link href=\"https://fonts.googleapis.com/css2?family=Acme&display=swap\" rel=\"stylesheet\">\n\n<!-- 메인 -->\n<div class=\"container\" style=\"height: 750px; background-color: white; padding:100px 10px 120px 10px; width: 700px;\">\n    <div class=\"container\" style=\"text-align: center;\">\n        <a href=\"/\" style=\"font-family: 'Acme', sans-serif; font-size: 70px; color:#044886;\">Eraser.T</a>\n        <div class=\"row\" style=\"padding:10px 10px 0 10px; margin:10px 10px 0 10px;\">\n            <div class=\"col-md-8\" style=\"margin: 0 auto; padding:15px 15px 0 15px\">\n\n                <!-- 회원가입 폼 -->\n                <form (ngSubmit)=\"onRegisterSubmit()\">\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control\" name=\"username\" [(ngModel)]=\"username\"\n                            placeholder=\"이름\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control\" name=\"userid\" [(ngModel)]=\"userid\" placeholder=\"아이디\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <input type=\"password\" class=\"form-control\" name=\"userpassword\" [(ngModel)]=\"userpassword\"\n                            placeholder=\"비밀번호\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <input type=\"password\" class=\"form-control\" name=\"userpassword2\" [(ngModel)]=\"userpassword2\"\n                            placeholder=\"비밀번호 확인\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <input type=\"text\" class=\"form-control\" name=\"userphone\" [(ngModel)]=\"userphone\"\n                            placeholder=\"핸드폰 번호\" />\n                    </div>\n                    <div class=\"form-group form-check\">\n                        <input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">\n                        <label class=\"form-check-label\" for=\"exampleCheck1\">Check me out</label>\n                    </div>\n                    <div class=\"form-group\">\n                        <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\">회원가입</button>\n                    </div>\n                </form>\n                <!-- 부가적 링크 -->\n                <div style=\"border-top:1px solid #8e8e8e; padding-top: 15px; margin-top: 35px;\">\n                </div>\n            </div>\n        </div>\n    </div>\n\n\n    <!-- Footer Bottom -->\n    <footer>\n        <div class=\"container\">\n            <p style=\"text-align:center; padding: 10px; font-size: 13px; margin: 0 auto;\">Copyright &nbsp;©\n                &nbsp;Eraser.T\n                Corp. &nbsp;All rights reserved.</p>\n        </div>\n    </footer>\n</div>");
 
 /***/ }),
 
@@ -175,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<app-navbar></app-navbar>\n\n<br><br>\n<div class=\"card\">\n    <div class=\"card-body\">\n        <h4 class=\"card-title\">검색 결과</h4>\n        <table class=\"table table-hover\">\n            <thead align=\"center\">\n                <tr>\n                    <th width=\"65%\">파일 이름</th>\n                    <th>날짜 / 시간</th>\n                    <th></th>\n                </tr>\n            </thead>\n            <tbody align=\"center\">\n                <tr *ngFor=\"let log of logs\">\n                    <td>{{log.filename}}</td>\n                    <td>\n                        <p>{{log.uploadDate | date:'yy-MM-d'}} / {{log.uploadDate | date:'HH:mm'}}</p>\n                    </td>\n                    <td><a class=\"btn btn-info\" role=\"button\" href=\"http://localhost:3000/logs/logdownload/{{log.filename}}\"><font color=\"white\">다운</font></a>&nbsp;<a class=\"btn btn-danger\" role=\"button\" href=\"http://localhost:3000/logs/logdelete/{{log.filename}}\"><font color=\"white\">삭제</font></a></td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n    <form class=\"form-inline my-2 my-lg-0\" (ngSubmit)=\"searchLog()\">\n        <input\n          class=\"form-control mr-sm-2\"\n          type=\"search\"\n          name=\"filename\"\n          id=\"filename\"\n        />\n        <button class=\"btn btn-primary\" type=\"submit\">\n          검색\n        </button>\n      </form>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<!-- 기본설정 -->\n<app-navbar></app-navbar>\n<div class=\"container\" style=\"text-align: center; height: 600px; padding-top: 20px;\">\n\n    <!-- 메인 -->\n    <div class=\"card\">\n        <div class=\"card-body\">\n            <h4 class=\"card-title\">검색 결과</h4>\n            <table class=\"table table-hover\">\n                <thead align=\"center\">\n                    <tr>\n                        <th width=\"65%\">파일 이름</th>\n                        <th>날짜 / 시간</th>\n                        <th></th>\n                    </tr>\n                </thead>\n                <tbody align=\"center\">\n                    <tr *ngFor=\"let log of logs\">\n                        <td>{{log.filename}}</td>\n                        <td>\n                            <p>{{log.uploadDate | date:'yy-MM-d'}} / {{log.uploadDate | date:'HH:mm'}}</p>\n                        </td>\n                        <td><a class=\"btn btn-info\" role=\"button\"\n                                href=\"http://localhost:3000/logs/logdownload/{{user.userid}}/{{log.filename}}\">\n                                <font color=\"white\">다운</font>\n                            </a>&nbsp;<a class=\"btn btn-danger\" role=\"button\"\n                                href=\"http://localhost:3000/logs/logdelete/{{user.userid}}/{{log.filename}}\">\n                                <font color=\"white\">삭제</font>\n                            </a></td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n        <form class=\"form-inline my-2 my-lg-0\" (ngSubmit)=\"searchLog()\">\n            <input class=\"form-control mr-sm-2\" type=\"search\" name=\"filename\" id=\"filename\" />\n            <button class=\"btn btn-primary\" type=\"submit\">\n                검색\n            </button>\n        </form>\n    </div>\n\n\n    <br><br><br><br>\n    <h4>테스트 중</h4>\n    <br>\n    <div class=\"card text-center m-3\">\n        <h3 class=\"card-header\">로그 목록</h3>\n        <div class=\"card-body\">\n            <!-- <h4 class=\"card-title\">로그 목록</h4> -->\n            <table class=\"table table-hover\">\n                <thead align=\"center\">\n                    <tr>\n                        <th width=\"65%\">파일 이름</th>\n                        <th>날짜 / 시간</th>\n                        <th></th>\n                    </tr>\n                </thead>\n                <tbody align=\"center\">\n                    <tr *ngFor=\"let item of pageOfItems\">\n                        <td>{{item.name}}</td>\n                        <td>{{item.uploadDate | date:'yy-MM-d'}} / {{item.uploadDate | date:'HH:mm'}}</td>\n                        <td>\n                            <a class=\"btn btn-info\" role=\"button\"\n                                href=\"http://eraser2020.herokuapp.com/logs/logdownload/{{item.id}}\">\n                                <font color=\"white\">다운</font>\n                            </a>&nbsp;\n                            <a class=\"btn btn-danger\" role=\"button\"\n                                href=\"http://eraser2020.herokuapp.com/logs/logdelete/{{item.userid}}/{{item.id}}\">\n                                <font color=\"white\">삭제</font>\n                            </a>\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n            <form class=\"form-inline my-2 my-lg-0\" (ngSubmit)=\"searchLog()\">\n                <input class=\"form-control mr-sm-2\" type=\"search\" name=\"filename\" id=\"filename\" />\n                <button class=\"btn btn-primary\" type=\"submit\">\n                    검색\n                </button>\n            </form>\n        </div>\n        <div class=\"card-footer\">\n            <jw-pagination [items]=\"items\" (changePage)=\"onChangePage($event)\"></jw-pagination>\n        </div>\n    </div>\n\n    <!-- Footer Bottom -->\n    <footer>\n        <div\n            style=\"text-align:center; padding: 30px 0 30px 0; font-size: 13px; margin: 0 auto; border-top: 1px solid #d7dbe6;\">\n            <p class=\"container\">Copyright &nbsp;© &nbsp;Eraser.T Corp. &nbsp;All rights reserved.</p>\n        </div>\n    </footer>");
 
 /***/ }),
 
@@ -458,6 +471,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_search_search_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./component/search/search.component */ "./src/app/component/search/search.component.ts");
 /* harmony import */ var _component_blank_for_reload_blank_for_reload_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./component/blank-for-reload/blank-for-reload.component */ "./src/app/component/blank-for-reload/blank-for-reload.component.ts");
 /* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
+/* harmony import */ var _component_emailregister_emailregister_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./component/emailregister/emailregister.component */ "./src/app/component/emailregister/emailregister.component.ts");
+
 
 
 
@@ -484,7 +499,8 @@ const routes = [
     { path: 'logs/:userid', component: _component_logs_logs_component__WEBPACK_IMPORTED_MODULE_10__["LogsComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
     { path: 'download', component: _component_downloadapp_downloadapp_component__WEBPACK_IMPORTED_MODULE_11__["DownloadappComponent"] },
     { path: 'search/:userid/:filename', component: _component_search_search_component__WEBPACK_IMPORTED_MODULE_12__["SearchComponent"], canActivate: [_guards_auth_guard__WEBPACK_IMPORTED_MODULE_14__["AuthGuard"]] },
-    { path: 'blank-for-reload', component: _component_blank_for_reload_blank_for_reload_component__WEBPACK_IMPORTED_MODULE_13__["BlankForReloadComponent"] }
+    { path: 'blank-for-reload', component: _component_blank_for_reload_blank_for_reload_component__WEBPACK_IMPORTED_MODULE_13__["BlankForReloadComponent"] },
+    { path: 'emailregister', component: _component_emailregister_emailregister_component__WEBPACK_IMPORTED_MODULE_15__["EmailregisterComponent"] }
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -526,9 +542,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 
 
+const array = ['data0', 'data1', 'data2'];
 let AppComponent = class AppComponent {
     constructor() {
-        this.title = 'angular-front';
+        this.title = 'firstStudy';
     }
 };
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -577,6 +594,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
 /* harmony import */ var _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @auth0/angular-jwt */ "./node_modules/@auth0/angular-jwt/fesm2015/auth0-angular-jwt.js");
 /* harmony import */ var _guards_auth_guard__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./guards/auth.guard */ "./src/app/guards/auth.guard.ts");
+/* harmony import */ var _component_emailregister_emailregister_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./component/emailregister/emailregister.component */ "./src/app/component/emailregister/emailregister.component.ts");
+/* harmony import */ var jw_angular_pagination__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! jw-angular-pagination */ "./node_modules/jw-angular-pagination/fesm2015/jw-angular-pagination.js");
+
+
 
 
 
@@ -616,13 +637,15 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _component_register_register_component__WEBPACK_IMPORTED_MODULE_12__["RegisterComponent"],
             _component_search_search_component__WEBPACK_IMPORTED_MODULE_13__["SearchComponent"],
             _component_profile_update_email_update_email_component__WEBPACK_IMPORTED_MODULE_14__["UpdateEmailComponent"],
-            _component_profile_update_password_update_password_component__WEBPACK_IMPORTED_MODULE_15__["UpdatePasswordComponent"]
+            _component_profile_update_password_update_password_component__WEBPACK_IMPORTED_MODULE_15__["UpdatePasswordComponent"],
+            _component_emailregister_emailregister_component__WEBPACK_IMPORTED_MODULE_23__["EmailregisterComponent"],
+            jw_angular_pagination__WEBPACK_IMPORTED_MODULE_24__["JwPaginationComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_16__["FormsModule"],
-            angular2_flash_messages__WEBPACK_IMPORTED_MODULE_18__["FlashMessagesModule"].forRoot(),
+            angular2_flash_messages__WEBPACK_IMPORTED_MODULE_18__["FlashMessagesModule"],
             _angular_common_http__WEBPACK_IMPORTED_MODULE_19__["HttpClientModule"],
             _auth0_angular_jwt__WEBPACK_IMPORTED_MODULE_21__["JwtModule"].forRoot({
                 config: {
@@ -729,6 +752,108 @@ DownloadappComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/component/emailregister/emailregister.component.scss":
+/*!**********************************************************************!*\
+  !*** ./src/app/component/emailregister/emailregister.component.scss ***!
+  \**********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9lbWFpbHJlZ2lzdGVyL2VtYWlscmVnaXN0ZXIuY29tcG9uZW50LnNjc3MifQ== */");
+
+/***/ }),
+
+/***/ "./src/app/component/emailregister/emailregister.component.ts":
+/*!********************************************************************!*\
+  !*** ./src/app/component/emailregister/emailregister.component.ts ***!
+  \********************************************************************/
+/*! exports provided: EmailregisterComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EmailregisterComponent", function() { return EmailregisterComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! angular2-flash-messages */ "./node_modules/angular2-flash-messages/module/index.js");
+/* harmony import */ var angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/app/services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var src_app_services_validate_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! src/app/services/validate.service */ "./src/app/services/validate.service.ts");
+
+
+
+
+
+
+let EmailregisterComponent = class EmailregisterComponent {
+    constructor(validateService, flashMessage, authService, router) {
+        this.validateService = validateService;
+        this.flashMessage = flashMessage;
+        this.authService = authService;
+        this.router = router;
+    }
+    ngOnInit() {
+    }
+    emailsend() {
+        const email = {
+            semail: this.semail
+        };
+        if (!email.semail) {
+            this.flashMessage.show('빈칸이 있습니다.', { cssClass: 'alert-danger', timeout: 3000 });
+            return false;
+        }
+        // Required Fields
+        else if (!this.validateService.validateEmail(email.semail)) {
+            this.flashMessage.show('이메일 형식이 아닙니다.', { cssClass: 'alert-danger', timeout: 3000 });
+            return false;
+        }
+        // email send
+        else {
+            alert("인증번호가 발송되었습니다.");
+            this.authService.emailregisterUser(email).subscribe(data => {
+                if (data == false) {
+                    this.flashMessage.show(data.msg, { cssClass: 'alert-danger', timeout: 3000 });
+                }
+            });
+        }
+    }
+    emailcert() {
+        const cert = {
+            cert: this.cert
+        };
+        // email cert
+        this.authService.emailcertUser(cert).subscribe(data => {
+            if (data.success) {
+                this.flashMessage.show(data.msg, { cssClass: 'alert-success', timeout: 3000 });
+                this.router.navigate(['/']);
+            }
+            else {
+                this.flashMessage.show(data.msg, { cssClass: 'alert-danger', timeout: 3000 });
+            }
+        });
+    }
+};
+EmailregisterComponent.ctorParameters = () => [
+    { type: src_app_services_validate_service__WEBPACK_IMPORTED_MODULE_5__["ValidateService"] },
+    { type: angular2_flash_messages__WEBPACK_IMPORTED_MODULE_2__["FlashMessagesService"] },
+    { type: src_app_services_auth_service__WEBPACK_IMPORTED_MODULE_3__["AuthService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] }
+];
+EmailregisterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-emailregister',
+        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./emailregister.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/emailregister/emailregister.component.html")).default,
+        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./emailregister.component.scss */ "./src/app/component/emailregister/emailregister.component.scss")).default]
+    })
+], EmailregisterComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/component/home/home.component.scss":
 /*!****************************************************!*\
   !*** ./src/app/component/home/home.component.scss ***!
@@ -825,12 +950,15 @@ let LoginComponent = class LoginComponent {
         this.authService.authenticateUser(login).subscribe(data => {
             if (data.success) {
                 this.authService.storeUserData(data.token, data.userNoPW);
-                this.flashMessage.show('You are now logged in', { cssClass: 'alert-success', timeout: 5000 });
                 this.router.navigate(['/']);
+            }
+            else if (data.auth == false) {
+                alert("이메일 인증 후 가입이 완료됩니다.");
+                this.router.navigate(['/emailregister']);
             }
             else {
                 this.flashMessage.show(data.msg, { cssClass: 'alert-danger', timeout: 5000 });
-                this.router.navigate(['login']);
+                this.router.navigate(['/login']);
             }
         });
     }
@@ -887,17 +1015,33 @@ let LogsComponent = class LogsComponent {
     constructor(authService, router) {
         this.authService = authService;
         this.router = router;
+        this.items = [];
     }
     ngOnInit() {
         this.readBoards(this.logs);
+    }
+    onChangePage(pageOfItems) {
+        // update current page of items
+        this.pageOfItems = pageOfItems;
     }
     // log 불러오기 기능
     readBoards(log) {
         this.userString = localStorage.getItem('user');
         this.user = JSON.parse(this.userString);
+        // console.log(this.user);
         this.userid = this.user.userid;
         this.authService.readBoards(this.userid).subscribe(data => {
             this.logs = data['msg'];
+            this.test = data['msg'];
+            console.log(this.logs);
+            this.items = Array(this.logs.length).fill(0).map((x, i) => ({
+                id: this.logs[i]['_id'],
+                name: this.logs[i]['filename'],
+                uploadDate: this.logs[i]['uploadDate'],
+                userid: this.userid
+            }));
+            // console.log(this.test[0]['_id'])
+            // console.log(JSON.parse(this.test.name))
         }, error => {
             console.log(error);
         });
@@ -908,6 +1052,9 @@ let LogsComponent = class LogsComponent {
         this.user = JSON.parse(this.userString);
         this.userid = this.user.userid;
         this.router.navigate(['/search/' + this.userid + '/' + $('#filename').val()]);
+    }
+    doDownload() {
+        // this.authService.downloadBoard(this.logs._id);
     }
 };
 LogsComponent.ctorParameters = () => [
@@ -971,7 +1118,6 @@ let NavbarComponent = class NavbarComponent {
     onLogoutClick() {
         this.authService.logout();
         this.flashMessage.show('Logout', { cssClass: 'alert-success', timeout: 3000 });
-        this.router.navigate(['/login']);
         return false;
     }
     checkLoggedIn() {
@@ -1297,11 +1443,6 @@ let RegisterComponent = class RegisterComponent {
     ngOnInit() {
     }
     onRegisterSubmit() {
-        // Password Check
-        if (this.userpassword !== this.userpassword2) {
-            this.flashMessage.show('Password wrong. try again', { cssClass: 'alert-danger', timeout: 3000 });
-            return false;
-        }
         const user = {
             username: this.username,
             userid: this.userid,
@@ -1309,25 +1450,18 @@ let RegisterComponent = class RegisterComponent {
             userpassword2: this.userpassword2,
             userphone: this.userphone
         };
-        // Required Fields
-        if (!this.validateService.validateRegister(user)) {
-            this.flashMessage.show('all blank', { cssClass: 'alert-danger', timeout: 3000 });
-            return false;
-        }
-        // // // Validate Email
-        // if(!this.validateService.validateEmail(user.email)) {
-        //   this.flashMessage.show('email false', {cssClass: 'alert-danger', timeout: 3000});
+        // // Required Fields
+        // if (!this.validateService.validateRegister(user)) {
+        //   this.flashMessage.show('빈칸이 있습니다.', { cssClass: 'alert-danger', timeout: 3000 });
         //   return false;
         // }
         // Register User
         this.authService.registerUser(user).subscribe(data => {
             if (data.success) {
-                this.flashMessage.show('You are now registered and can log in', { cssClass: 'alert-success', timeout: 3000 });
                 this.router.navigate(['/login']);
             }
             else {
-                this.flashMessage.show(data['msg'], { cssClass: 'alert-danger', timeout: 3000 });
-                this.router.navigate(['/register']);
+                this.flashMessage.show(data.msg, { cssClass: 'alert-danger', timeout: 3000 });
             }
         });
     }
@@ -1386,6 +1520,7 @@ let SearchComponent = class SearchComponent {
         this.route = route;
         this.authService = authService;
         this.router = router;
+        this.items = [];
     }
     ngOnInit() {
         this.readBoard(this.logs);
@@ -1397,9 +1532,19 @@ let SearchComponent = class SearchComponent {
         this.filename = this.route.snapshot.params['filename'];
         this.authService.readBoard(this.filename, this.userid).subscribe(data => {
             this.logs = data['msg'];
+            this.items = Array(this.logs.length).fill(0).map((x, i) => ({
+                id: this.logs[i]['_id'],
+                name: this.logs[i]['filename'],
+                uploadDate: this.logs[i]['uploadDate'],
+                userid: this.userid
+            }));
         }, error => {
             console.log(error);
         });
+    }
+    onChangePage(pageOfItems) {
+        // update current page of items
+        this.pageOfItems = pageOfItems;
     }
     searchLog() {
         this.userString = localStorage.getItem('user');
@@ -1514,6 +1659,16 @@ let AuthService = class AuthService {
         const registerUrl = this.prepEndpoint('users/register');
         return this.http.post(registerUrl, user, httpOptions);
     }
+    // 이메일인증
+    emailregisterUser(email) {
+        const emailregisterUrl = this.prepEndpoint('cert/emailregister');
+        return this.http.post(emailregisterUrl, email, httpOptions);
+    }
+    // 인증비교
+    emailcertUser(cert) {
+        const emailregisterUrl = this.prepEndpoint('cert/emailregister');
+        return this.http.post(emailregisterUrl, cert, httpOptions);
+    }
     // 로그인
     authenticateUser(login) {
         const loginUrl = this.prepEndpoint('users/authenticate');
@@ -1534,6 +1689,7 @@ let AuthService = class AuthService {
         this.authToken = localStorage.getItem('id_token');
         const httpOptions1 = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                'Access-Control-Allow-Headers': '*',
                 'Content-Type': 'application/json',
                 'Authorization': this.authToken
             })
@@ -1599,18 +1755,10 @@ __webpack_require__.r(__webpack_exports__);
 
 let ValidateService = class ValidateService {
     constructor() { }
-    // 회원가입 검사
-    validateRegister(user) {
-        if (user.username == undefined ||
-            user.userid == undefined ||
-            user.userpassword == undefined ||
-            user.userpassword != user.userpassword2 ||
-            user.userphone == undefined) {
-            return false;
-        }
-        else {
-            return true;
-        }
+    // 이메일 유효성 검사
+    validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
     }
 };
 ValidateService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -1688,7 +1836,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_2__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\kdsko\Desktop\eraser2020\angular-front\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\kdsko\Desktop\졸작\eraser2020\angular-front\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -5,23 +5,24 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const users = require('./routes/users');
+const cert = require('./routes/cert');
 const config = require('./config/database');
 const app = express();
 const port = process.env.PORT || 3000;
 require('./express.config')(app);
 
 // 연결 옵션
-mongoose.connect(config.database, {useNewUrlParser: true, useUnifiedTopology: true}).catch(function(error) {console.log('catch handler')});
+mongoose.connect(config.database, { useNewUrlParser: true, useUnifiedTopology: true }).catch(function (error) { console.log('catch handler') });
 
 // 연결 성공 메세지
-mongoose.connection.on('connected', ()=> {
+mongoose.connection.on('connected', () => {
     console.log('Connected to Database ' + config.database);
 });
 
 // 연결 에러 메세지
 mongoose.connection.on('error', err => {
     console.log('Database error: ' + err);
-  });
+});
 
 /* Cross Origin Resource Sharing의 약자로, 현재 Application의 도메인(웹페이지)에서 
 다른 웹페이지 도메인으로 리소스가 요청되는 경우를 얘기합니다. 
@@ -43,10 +44,15 @@ require('./config/passport')(passport);
 // 기본 설정
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/users', users);
+app.use('/cert', cert);
+app.use(function (req, res, next) {
+    res.locals.test = users.userid;
+    next();
+});
 app.use('/ekdnsfhem', express.static(__dirname + '/download'));
 
 // 서버 시작 메세지
-app.listen(port, function() {
+app.listen(port, function () {
     console.log("server started on port " + port);
 });
 

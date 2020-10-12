@@ -20,6 +20,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { AuthService } from './services/auth.service';
 import { JwtModule } from '@auth0/angular-jwt';
 import { AuthGuard } from './guards/auth.guard';
+import { EmailregisterComponent } from './component/emailregister/emailregister.component';
+import { JwPaginationComponent } from 'jw-angular-pagination';
 
 @NgModule({
   declarations: [
@@ -34,13 +36,15 @@ import { AuthGuard } from './guards/auth.guard';
     RegisterComponent,
     SearchComponent,
     UpdateEmailComponent,
-    UpdatePasswordComponent
+    UpdatePasswordComponent,
+    EmailregisterComponent,
+    JwPaginationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    FlashMessagesModule.forRoot(),
+    FlashMessagesModule,
     HttpClientModule,
     JwtModule.forRoot({
       config: {

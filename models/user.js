@@ -16,10 +16,26 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    userpassword2: {
+        type: String,
+        required: false
+    },
     userphone: {
         type: Number,
         required: true
-    }
+    },
+    semail: {
+        type: String,
+        required: false
+    },
+    ecert: {
+        type: String,
+        required: false
+    },
+    auth: {
+        type: Boolean,
+        required: true
+    },
 });
 
 const User1 = module.exports = mongoose.model('User', UserSchema);

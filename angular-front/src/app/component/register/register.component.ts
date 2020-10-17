@@ -14,7 +14,7 @@ export class RegisterComponent implements OnInit {
   userid: string;
   userpassword: string;
   userpassword2: string;
-  userphone: number;
+  userphone: string;
 
   constructor(private validateService: ValidateService, private flashMessage: FlashMessagesService, private authService: AuthService, private router: Router) { }
 
@@ -36,14 +36,20 @@ export class RegisterComponent implements OnInit {
     //   return false;
     // }
 
-    // Register User
-    this.authService.registerUser(user).subscribe(data => {
-      if (data.success) {
-        this.router.navigate(['/login']);
-      } else {
-        this.flashMessage.show(data.msg, { cssClass: 'alert-danger', timeout: 3000 });
-      }
-    });
-
+    // Phone validate
+    if (!this.validateService.validatephone(user.userphone)) {
+      this.flashMessage.show('핸드폰 형식이 아닙니다.', { cssClass: 'alert-danger', timeout: 3000 });
+      return false;
+    } else {
+      // Register User
+      this.authService.registerUser(user).subscribe(data => {
+        if (data.success) {
+          alert("회원가입 완료되었습니다.")
+          this.router.navigate(['/login']);
+        } else {
+          this.flashMessage.show(data.msg, { cssClass: 'alert-danger', timeout: 3000 });
+        }
+      });
+    }
   }
 }

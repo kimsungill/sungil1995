@@ -5,6 +5,8 @@ const fs = require('fs');
 const mongoose = require('mongoose');
 const crypto = require('crypto');
 const config = require('../config/database');
+const schedule = require('node-schedule');
+const moment = require('moment');
 
 // 암복호화 알고리즘
 const algorithm = 'aes-256-ctr';
@@ -37,6 +39,35 @@ connection.once('open', () => {
 
     var gfs = gridfs(connection.db);
 
+    // 30일 이후 자동 삭제
+    var schdu = schedule.scheduleJob('* * 0 * * *', function () {
+        let amonth = moment().subtract(1, 'month')
+        var query = {
+            "uploadDate": {
+                "$lte": new Date(amonth)
+            }
+        };
+        gfs.files.find(query).sort({ uploadDate: -1 }).toArray(function (err, logs) {
+            if (err) {
+                console.log(err);
+                return;
+            } else if (logs.length == 0) {
+                console.log("삭제할 파일이 없습니다.")
+            } else {
+                for (var i = 0; i < logs.length; i++) {
+                    var filename = logs[i].filename
+                    gfs.remove({ _id: logs[i]._id }, (err) => {
+                        if (err) {
+                            console.log(err);
+                        } else {
+                            console.log(filename + " 파일 삭제 완료");
+                        }
+                    });
+                }
+            }
+        });
+    });
+    
     //     // 업로드 잘됨시작
     //     // 로그 업로드
     router.post('/logupload', (req, res) => {

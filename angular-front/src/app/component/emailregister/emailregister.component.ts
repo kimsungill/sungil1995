@@ -29,7 +29,7 @@ export class EmailregisterComponent implements OnInit {
       return false;
     }
 
-    // Required Fields
+    // Email validate
     else if (!this.validateService.validateEmail(email.semail)) {
       this.flashMessage.show('이메일 형식이 아닙니다.', { cssClass: 'alert-danger', timeout: 3000 });
       return false;
@@ -55,7 +55,7 @@ export class EmailregisterComponent implements OnInit {
     // email cert
     this.authService.emailcertUser(cert).subscribe(data => {
       if (data.success) {
-        this.flashMessage.show(data.msg, { cssClass: 'alert-success', timeout: 3000 });
+        alert("가입이 완료되었습니다.")
         this.router.navigate(['/']);
       } else {
         this.flashMessage.show(data.msg, { cssClass: 'alert-danger', timeout: 3000 });

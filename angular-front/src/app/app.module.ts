@@ -22,6 +22,8 @@ import { JwtModule } from '@auth0/angular-jwt';
 import { AuthGuard } from './guards/auth.guard';
 import { EmailregisterComponent } from './component/emailregister/emailregister.component';
 import { JwPaginationComponent } from 'jw-angular-pagination';
+import { TeamintroComponent } from './component/teamintro/teamintro.component';
+import { ConceptComponent } from './component/concept/concept.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { JwPaginationComponent } from 'jw-angular-pagination';
     UpdateEmailComponent,
     UpdatePasswordComponent,
     EmailregisterComponent,
-    JwPaginationComponent
+    JwPaginationComponent,
+    TeamintroComponent,
+    ConceptComponent
   ],
   imports: [
     BrowserModule,

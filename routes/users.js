@@ -75,13 +75,14 @@ router.post('/authenticate', (req, res, next) => {
                         });
 
                         res.json({
+                            userNoPW2 : user.username,
                             success: true,
                             token: 'JWT ' + token,
                             userNoPW: {
                                 //id: user._id,
                                 username: user.username,
                                 userid: user.userid,
-                                userphone: user.userphone
+                                semail: user.semail
                             }
                         });
                     }
@@ -94,12 +95,13 @@ router.post('/authenticate', (req, res, next) => {
 });
 
 //profile
-router.get('/profile', passport.authenticate('jwt', { session: false }), (req, res, next) => {
+// 인증 오류시 사용
+router.get('/profile', (req, res, next) => {
     res.json({
         user: {
-            userid: req.user.userid,
-            username: req.user.username,
-            userphone: req.user.userphone
+            username: req.user.username, 
+            userid: req.user.userid, 
+            semail: req.user.semail
         }
     });
 })

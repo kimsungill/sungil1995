@@ -23,10 +23,10 @@ export class AuthService {
 
   prepEndpoint(ep) {
     // 1. localhost에 포팅시
-    // return 'http://localhost:3000/' + ep;
+    return 'http://localhost:3000/' + ep;
 
     // 2. Heroku 클라우드 서버에 포팅 시
-     return ep;
+    //  return ep;
   }
 
   // 회원가입
@@ -37,13 +37,13 @@ export class AuthService {
 
   // 이메일인증
   emailregisterUser(email): Observable<any> {
-    const emailregisterUrl = this.prepEndpoint('cert/emailregister');
+    const emailregisterUrl = this.prepEndpoint('certs/emailauth');
     return this.http.post<Email>(emailregisterUrl, email, httpOptions);
   }
 
   // 인증비교
   emailcertUser(cert): Observable<any> {
-    const emailregisterUrl = this.prepEndpoint('cert/emailregister');
+    const emailregisterUrl = this.prepEndpoint('certs/emailauth');
     return this.http.post<Cert>(emailregisterUrl, cert, httpOptions);
   }
 

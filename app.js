@@ -5,7 +5,7 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const users = require('./routes/users');
-const cert = require('./routes/cert');
+const certs = require('./routes/certs');
 const config = require('./config/database');
 const app = express();
 const port = process.env.PORT || 3000;
@@ -43,12 +43,8 @@ require('./config/passport')(passport);
 
 // 기본 설정
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/certs', certs);
 app.use('/users', users);
-app.use('/cert', cert);
-app.use(function (req, res, next) {
-    res.locals.test = users.userid;
-    next();
-});
 app.use('/ekdnsfhem', express.static(__dirname + '/download'));
 
 // 서버 시작 메세지
@@ -56,6 +52,6 @@ app.listen(port, function () {
     console.log("server started on port " + port);
 });
 
-// app.get('/', (req, res) => {
-//     res.send('<h1>서비스 준비중...</h1>');
-// });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+})

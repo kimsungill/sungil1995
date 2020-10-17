@@ -18,14 +18,15 @@ export class User {
   export class UserNoPW {
     username: string;
     userid: string;
-    userphone: number;
+    userphone: string;
   }
 
-  // 이메일 인증 데이터 모델
+  // 이메일 인증
   export class Email {
     semail: string;
   }
   
+  // 인증코드
   export class Cert {
     cert: string;
   }
